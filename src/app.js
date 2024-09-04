@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 window.onload = function() {
@@ -10,7 +9,6 @@ document
   .addEventListener("click", generateRandomCard);
 document.getElementById("resizeCardBtn").addEventListener("click", resizeCard);
 
-// Función para generar una carta aleatoria
 function generateRandomCard() {
   const cardElement = document.getElementById("card");
   const suits = ["heart", "diamond", "spade", "club"];
@@ -29,12 +27,8 @@ function generateRandomCard() {
     "Q",
     "K"
   ];
-
-  // Generar aleatoriamente el palo y el valor
   const randomSuit = suits[Math.floor(Math.random() * suits.length)];
   const randomValue = values[Math.floor(Math.random() * values.length)];
-
-  // Limpiar el contenido anterior
   cardElement.className = `card-container ${randomSuit}`;
   cardElement.innerHTML = `
     <div class="top-suit">${getSuitSymbol(randomSuit)}</div>
@@ -43,7 +37,6 @@ function generateRandomCard() {
   `;
 }
 
-// Función para obtener el símbolo del palo
 function getSuitSymbol(suit) {
   switch (suit) {
     case "heart":
@@ -57,7 +50,6 @@ function getSuitSymbol(suit) {
   }
 }
 
-// Función para cambiar el tamaño de la carta
 function resizeCard() {
   const width = document.getElementById("widthInput").value;
   const height = document.getElementById("heightInput").value;
