@@ -1,29 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Generador de Cartas Aleatorias</title>
+    <!-- Bootstrap CSS -->
     <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+  <body
+    class="bg-success d-flex justify-content-center align-items-center vh-100"
+  >
+    <div class="container text-center">
+      <h1 class="text-white mb-4">Generador de Cartas Aleatorias</h1>
+      <div class="row justify-content-center">
+        <div id="card" class="card-container mx-auto position-relative"></div>
+      </div>
+      <button id="newCardBtn" class="btn btn-primary mt-3">
+        Generar Nueva Carta
+      </button>
+      <div class="mt-3">
+        <label for="widthInput" class="text-white"
+          >Ancho de la Carta (px):</label
+        >
+        <input
+          type="text"
+          id="widthInput"
+          class="form-control d-inline-block w-auto"
+          placeholder="Ancho"
+        />
+        <label for="heightInput" class="text-white"
+          >Alto de la Carta (px):</label
+        >
+        <input
+          type="text"
+          id="heightInput"
+          class="form-control d-inline-block w-auto"
+          placeholder="Alto"
+        />
+        <button id="resizeCardBtn" class="btn btn-secondary mt-2">
+          Cambiar Tamaño
+        </button>
       </div>
     </div>
+
+    <!-- Bootstrap JS y VanillaJS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

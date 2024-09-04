@@ -1,1 +1,72 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+/* Fondo verde para toda la pantalla */
+body {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Diseño de la carta */
+.card-container {
+  width: 150px;
+  height: 220px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  transition: width 0.3s, height 0.3s;
+}
+
+/* Estilo para los símbolos de los palos en las esquinas */
+.top-suit,
+.bottom-suit {
+  position: absolute;
+  font-size: 2rem;
+}
+
+.top-suit {
+  top: 10px;
+  left: 10px;
+}
+
+.bottom-suit {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg); /* Gira el símbolo inferior */
+}
+
+/* Tamaño del valor central de la carta */
+.card-value {
+  font-size: 4rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Colores según el palo */
+.heart {
+  color: red;
+}
+
+.diamond {
+  color: red;
+}
+
+.spade,
+.club {
+  color: black;
+}
+
+/* Cambio del tamaño de la carta */
+#card {
+  transition: width 0.3s, height 0.3s;
+}
